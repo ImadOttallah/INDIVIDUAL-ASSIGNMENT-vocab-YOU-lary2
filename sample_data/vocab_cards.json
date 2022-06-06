@@ -1,0 +1,47 @@
+{
+  "-MiBsfuTafbEQ7eAULxV" : {
+    "title" : "Java",
+    "firebaseKey" : "-MiBsfuTafbEQ7eAULxV",
+    "definition" : "A high-level programming language that is one of the core technologies of the World Wide Web. It is used as a client-side programming language by 97.8 percent of all websites.",
+    "language_tech" : "Java",
+    "time" : "11:00",
+    "favorite": true,
+    "uid": ""
+  },
+  "-MiBt86VzkC-EGmJnxjm" : {
+    "title" : "Go Programing",
+    "firebaseKey" : "-MiBt86VzkC-EGmJnxjm",
+    "definition" : "Go was developed by Google in 2007 for APIs and web applications. Go has recently become one of the fastest-growing programming languages due to its simplicity, as well as its ability to handle multicore and networked systems and massive codebases.",
+    "language_tech" : "Go",
+    "time" : "11:00",
+    "favorite": true,
+    "uid": ""
+  },
+  "-MiBtwf1BwN9pGavQeR3" : {
+    "title" : "PHP Programming",
+    "firebaseKey" : "-MiBtwf1BwN9pGavQeR3",
+    "definition" : "HP is an open-source programming language created in 1990. Many web developers find it essential to learn PHP, as this language is used to build more than 80% of websites on the Internet, including notable sites like Facebook and Yahoo.",
+    "language_tech" : "PHP",
+    "time" : "11:00",
+    "favorite": true,
+    "uid": ""
+  },
+  "-MiBuOfHv9NCKB_cneij" : {
+    "title" : "C# Programing",
+    "firebaseKey" : "-MiBuOfHv9NCKB_cneij",
+    "definition" : "ToC# is best suited for applications on Windows, Android, and iOS, as it takes the help of the integrated development environment product, Microsoft Visual C++. C# is used on the back end of several popular websites like Bing, Dell, Visual Studio, and MarketWatch.mi",
+    "language_tech" : "C#",
+    "time" : "11:00",
+    "favorite": true,
+    "uid": ""
+  },
+  "-MiBulenBnY8by9Xn7q1" : {
+    "title" : "Python Programing",
+    "firebaseKey" : "-MiBulenBnY8by9Xn7q1",
+    "definition" : "Python is one of the most popular programming languages today and is easy for beginners to learn because of its readability. It is a free, open-source programming language with extensive support modules and community development, easy integration with web services, user-friendly data structures, and GUI-based desktop applications. It is a popular programming language for machine learning and deep learning applications. ",
+    "language_tech" : "Ptyhon",
+    "time" : "11:00",
+    "favorite": true,
+    "uid": ""
+  }
+}
