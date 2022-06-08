@@ -9,21 +9,23 @@ const getCards = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const deleteCard = () => new Promise((resolve, reject) => {
-  axios.get()
-    .then((response) => resolve((response)))
+const deleteCard = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/vocab_cards/${firebaseKey}.json`)
+    .then(() => {
+      getCards().then((cardsArray) => resolve(cardsArray));
+    })
     .catch(reject);
 });
 
-const updateCard = () => new Promise((resolve, reject) => {
-  axios.get()
-    .then((response) => resolve((response)))
+const updateCard = (cardObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/vocab_cards/${cardObj.firebaseKey}.json`, cardObj)
+    .then(() => getCards(cardObj).then(resolve))
     .catch(reject);
 });
 
-const getSingleCard = () => new Promise((resolve, reject) => {
-  axios.get()
-    .then((response) => resolve((response)))
+const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/vocab_cards/${firebaseKey}.json`)
+    .then((response) => resolve((response.data)))
     .catch(reject);
 });
 

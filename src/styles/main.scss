@@ -15,10 +15,15 @@ body {
     flex-flow: row wrap;
     text-align: center;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     .card {
       width: 300px;
       margin: 5px;
+    }
+    .card-footer {
+      background: transparent;
+      border-top: 0px;
+      
     }
 }
