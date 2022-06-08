@@ -11,11 +11,18 @@ const addCard = (obj = {}) => {
       </div>
       <div class="form-group">
         <label for="image">Language/Tech</label>
-        <input type="text" class="form-control" id="language_tech" placeholder="Language/Tech" value="${obj.language_tech || ''}" required>
+       
+        <div class="form-group">
+        <select id="language_tech">
+          <option value="">Select a Language</option>
+          <option value="javascript">Javascript</option>
+          <option value="css">CSS</option>
+          <option value="html">HTML</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="title">Description</label>
-        <input type="text" class="form-control" id="definition" aria-describedby="definition" placeholder="Definition" value="${obj.email || ''}" required>
+        <input type="text" class="form-control" id="definition" aria-describedby="definition" placeholder="Definition" value="${obj.definition || ''}" required>
       </div>
       <div class="form-check">
       <input type="checkbox" class="form-check-input" id="favorite" ${obj.favorite ? 'checked' : ''}>

@@ -16,9 +16,10 @@ const showCards = (array) => {
     <h5 class="card-title">${item.title}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${item.language_tech}</h6>
     <p class="card-text">${item.definition}</p>
-    <div><a href="#" class="card-link">Edit</a>
-    <a href="#" class="card-link">Delete</a></div>
   </div>
+  <div class="card-footer mx-auto text-muted">
+  <button id="edit-card--${item.firebaseKey}">Edit</button>
+    <button id="delete-card--${item.firebaseKey}">Delete</button></div>
 </div>`;
     });
     renderToDOM('#card-container', domString);
