@@ -1,8 +1,9 @@
 import renderToDOM from '../helpers/renderToDom';
+import logoutButton from './buttons/logoutButton';
 
 const navBar = () => {
   const domString = `
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +29,11 @@ const navBar = () => {
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
+   
   </div>
 </nav>
 `;
   renderToDOM('#navigation', domString);
+  logoutButton();
 };
 export default navBar;

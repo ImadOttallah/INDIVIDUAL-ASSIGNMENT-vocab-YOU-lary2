@@ -9,6 +9,7 @@ const formEvents = () => {
         title: document.querySelector('#title').value,
         language_tech: document.querySelector('#language_tech').value,
         definition: document.querySelector('#definition').value,
+        time: Date.now(),
       };
       console.warn(cardObj);
       createCard(cardObj).then((cardArray) => showCards(cardArray));
@@ -19,6 +20,7 @@ const formEvents = () => {
         title: document.querySelector('#title').value,
         language_tech: document.querySelector('#language_tech').value,
         definition: document.querySelector('#definition').value,
+        favorite: document.querySelector('#favorite').checked,
         firebaseKey,
       };
       updateCard(cardObj).then(showCards);

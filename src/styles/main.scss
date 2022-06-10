@@ -27,3 +27,23 @@ body {
       
     }
 }
+
+#form-container {
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: auto;
+ justify-content: center;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}

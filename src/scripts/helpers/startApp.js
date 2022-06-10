@@ -6,12 +6,12 @@ import formEvents from '../events/formEvents';
 import navEvents from '../events/navEvents';
 import { showCards } from '../pages/cards';
 
-const startApp = () => {
+const startApp = (user) => {
   domBuilder();
   navBar();
-  domEvents();
-  formEvents();
-  navEvents();
+  formEvents(user.uid);
+  navEvents(user.uid);
   getCards().then((cardsArray) => showCards(cardsArray));
+  domEvents(user.id);
 };
 export default startApp;

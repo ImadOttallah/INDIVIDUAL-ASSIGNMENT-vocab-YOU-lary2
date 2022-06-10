@@ -40,10 +40,16 @@ const createCard = (cardObj) => new Promise((resolve, reject) => {
     }).catch(reject);
 });
 
+const filterCards = (cardObj) => new Promise((resolve, reject) => {
+  getCards().then((response) => resolve(response.filter((card) => card.language_tech === cardObj)))
+    .catch(reject);
+});
+
 export {
   getCards,
   deleteCard,
   updateCard,
   getSingleCard,
   createCard,
+  filterCards,
 };
