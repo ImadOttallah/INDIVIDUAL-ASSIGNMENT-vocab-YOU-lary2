@@ -7,6 +7,9 @@ const emptyCards = () => {
 
 const showCards = (array) => {
   clearDom();
+  const btnString = '<div class="filter-buttons"><button id="filter--java">Java</button> <button id="filter--go">Go</button><button id="filter--php">PHP</button><button  id="filter--python">Python</button><button  id="filter--c_sharp">C#</button></div>';
+  renderToDOM('#add-button', btnString);
+
   if (array.length) {
     let domString = '';
     array.forEach((item) => {
