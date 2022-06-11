@@ -9,11 +9,22 @@ const navEvents = (uid) => {
 
   document.querySelector('#navigation').addEventListener('click', (e) => {
     if (e.target.id.includes('add-card-btn')) {
-      console.warn('add card');
       addCard();
       if (e.target.id.includes('#google-auth')) {
         signOut();
       }
+    }
+    if (e.target.id.includes('home')) {
+      getCards(uid).then((cardArray) => showCards(cardArray));
+    }
+  });
+  document.querySelector('#search-bar').addEventListener('keyup', (e) => {
+    const searchInput = document.querySelector('#search-bar').value.toLowerCase();
+    if (e.keyCode === 13) {
+      getCards(uid)
+        .then((response) => (response.filter((card) => card.title.toLowerCase().includes(searchInput))))
+        .then((search) => (showCards(search, uid)))
+        .then(document.querySelector('#search-bar').value = '');
     }
   });
   document.querySelector('#add-button').addEventListener('click', (e) => {

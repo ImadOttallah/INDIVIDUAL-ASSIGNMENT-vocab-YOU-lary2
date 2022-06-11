@@ -21,6 +21,7 @@ const showCards = (array) => {
     <p class="card-text">${item.definition}</p>
   </div>
   <div class="card-footer mx-auto text-muted">
+  <button id="view-card--${item.firebaseKey}">View</button>
   <button id="edit-card--${item.firebaseKey}">Edit</button>
     <button id="delete-card--${item.firebaseKey}">Delete</button></div>
 </div>`;
