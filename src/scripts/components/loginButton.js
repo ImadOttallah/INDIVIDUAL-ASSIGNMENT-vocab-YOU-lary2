@@ -1,5 +1,5 @@
-import signIn from '../../helpers/auth/signIn';
-import renderToDOM from '../../helpers/renderToDom';
+import signIn from '../helpers/auth/signIn';
+import renderToDOM from '../helpers/renderToDom';
 
 // GOOGLE LOGIN BUTTON
 const loginButton = () => {

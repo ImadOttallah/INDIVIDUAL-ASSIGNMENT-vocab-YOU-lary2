@@ -1,5 +1,5 @@
 import renderToDOM from '../helpers/renderToDom';
-import logoutButton from './buttons/logoutButton';
+import logoutButton from './logoutButton';
 import logo from '../../images/logo.jpg';
 
 const navBar = () => {
