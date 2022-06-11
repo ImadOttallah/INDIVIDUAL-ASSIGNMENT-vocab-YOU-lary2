@@ -3,6 +3,7 @@ import {
 } from '../../api/cardData';
 import addCard from '../components/forms/addCard';
 import { showCards } from '../pages/cards';
+import viewCard from '../pages/viewCard';
 
 const domEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -15,8 +16,12 @@ const domEvents = (uid) => {
     }
     if (e.target.id.includes('edit-card')) {
       const [, firebaseKey] = e.target.id.split('--');
-      console.warn('eeeee');
       getSingleCard(firebaseKey).then((cardObj) => addCard(uid, cardObj));
+    }
+    if (e.target.id.includes('view-card')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      console.warn('eeeee');
+      getSingleCard(firebaseKey).then((cardObj) => viewCard(cardObj));
     }
   });
 };
