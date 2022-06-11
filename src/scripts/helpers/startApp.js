@@ -8,10 +8,10 @@ import { showCards } from '../pages/cards';
 
 const startApp = (user) => {
   domBuilder();
-  navBar();
+  domEvents(user.uid);
   formEvents(user.uid);
+  navBar();
   navEvents(user.uid);
-  getCards().then((cardsArray) => showCards(cardsArray));
-  domEvents(user.id);
+  getCards(user.uid).then((cardsArray) => showCards(cardsArray));
 };
 export default startApp;

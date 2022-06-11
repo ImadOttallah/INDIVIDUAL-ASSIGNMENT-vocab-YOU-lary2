@@ -1,7 +1,7 @@
 import { createCard, updateCard } from '../../api/cardData';
 import { showCards } from '../pages/cards';
 
-const formEvents = () => {
+const formEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submit-card')) {
@@ -10,6 +10,7 @@ const formEvents = () => {
         language_tech: document.querySelector('#language_tech').value,
         definition: document.querySelector('#definition').value,
         time: Date.now(),
+        uid,
       };
       console.warn(cardObj);
       createCard(cardObj).then((cardArray) => showCards(cardArray));
@@ -22,6 +23,7 @@ const formEvents = () => {
         definition: document.querySelector('#definition').value,
         favorite: document.querySelector('#favorite').checked,
         firebaseKey,
+        uid
       };
       updateCard(cardObj).then(showCards);
     }

@@ -1,7 +1,9 @@
+import { filterCards, getCards } from '../../api/cardData';
 import addCard from '../components/forms/addCard';
 import signOut from '../helpers/auth/signOut';
+import { showCards } from '../pages/cards';
 
-const navEvents = () => {
+const navEvents = (uid) => {
   // document.querySelector('#navigation')
   //   .addEventListener('click', signOut);
 
@@ -12,6 +14,15 @@ const navEvents = () => {
       if (e.target.id.includes('#google-auth')) {
         signOut();
       }
+    }
+  });
+  document.querySelector('#add-button').addEventListener('click', (e) => {
+    if (e.target.id.includes('filter')) {
+      const [, language] = e.target.id.split('--');
+      filterCards(uid, language);
+    }
+    if (e.target.id.includes('all-cards')) {
+      getCards(uid).then((cardArray) => showCards(cardArray));
     }
   });
 };
