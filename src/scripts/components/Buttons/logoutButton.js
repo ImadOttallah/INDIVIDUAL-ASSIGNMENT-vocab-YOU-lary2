@@ -1,5 +1,4 @@
 import firebase from 'firebase/app';
-import 'firebase/auth';
 
 const signMeOut = () => {
   firebase.auth().signOut();
